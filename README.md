@@ -14,6 +14,10 @@ This repository contains my solutions for the online courses "Algorithms, Part I
 
 # Projects
 
+<details>
+
+<summary>Part I, Week 1: Percolation</summary>
+
 ## Percolation
 [Project Specification](https://coursera.cs.princeton.edu/algs4/assignments/percolation/specification.php)
 
@@ -48,3 +52,4 @@ For example, running _PercolationVisualizer.java_ on _input10.txt_ results in th
 
 The solution I implemented simply uses two Union-Find objects. Doing this seems to satisfy the Coursera autograder, but it's also pretty costly in terms of memory. I'd be interested in hearing about any other solutions out there!
 
+<details>
