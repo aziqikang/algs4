@@ -1,7 +1,10 @@
+import edu.princeton.cs.algs4.WeightedQuickUnionUF;
+
 /**
  * Algorithms Week 1 Project -- Percolation
  *
- *  [desc]
+ * This project uses the union-find data structure to determine whether a square-lattice of open and closed
+ * sites percolates from top to bottom.
  *
  * @author Amy Kang
  *
@@ -14,13 +17,17 @@ public class Percolation {
     private WeightedQuickUnionUF partialUf; // does not include top node, used for backwash issues
     private boolean[][] sites;
 
-    // creates n-by-n grid, with all sites initially blocked
+    /**
+     * creates n-by-n grid, with all sites initially blocked
+     *
+     * @param n dimension of square lattice
+     */
     public Percolation(int n) {
         if (n <= 0) throw new IllegalArgumentException();
         numOpenSites = 0;
         sites = new boolean[n + 2][n + 2];
-        uf = new WeightedQuickUnionUF(n * n + 2); // all the sites in sites,
-        // excluding the buffer and including two nodes for the top and bottom
+        // all the sites in sites, excluding the buffer and including two nodes for the top and bottom
+        uf = new WeightedQuickUnionUF(n * n + 2);
         partialUf = new WeightedQuickUnionUF(n * n + 1);
         for (int r = 0; r < n + 2; r++) {
             for (int c = 0; c < n + 2; c++) {

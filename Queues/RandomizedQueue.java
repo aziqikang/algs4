@@ -1,9 +1,17 @@
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
-
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+/**
+ * Algorithms Week 2 Project -- Randomized Deques and Queues
+ *
+ * This program is a generic data type for a randomized queue, which removes items in a uniformly random order
+ *
+ * @author Amy Kang
+ *
+ * @version November 19, 2021
+ */
 public class RandomizedQueue<Item> implements Iterable<Item> {
 
     private Item[] queue;
